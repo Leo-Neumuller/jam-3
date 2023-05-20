@@ -1,1 +1,5 @@
 Base path: 'D:/UnityEditor/2021.3.25f1/Editor/Data', plugins path 'D:/UnityEditor/2021.3.25f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+
+Cmd: compileSnippet
+  insize=5169 file=Assets/TextMesh Pro/Resources/Shaders/TextMeshPro/Mobile/Distance Field pass=<Unnamed Pass 0> cachin
