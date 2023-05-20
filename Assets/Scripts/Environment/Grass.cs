@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.VisualScripting;
+
 
 public class Grass : MonoBehaviour
 {
@@ -18,9 +20,21 @@ public class Grass : MonoBehaviour
         {
             GetComponent<Animator>().Play("MovingGrassR");
         }
-        Debug.Log("test");
     }
 
+    void OnTriggerStay2D(Collider2D col)
+    {
+        UpdateScore();
+    }
+    
+    private void UpdateScore()
+    {
+        int score = Variables.ActiveScene.Get<int>("Score");
+
+        score += 10;
+
+        Variables.ActiveScene.Set("Score", score);
+    }
     public void ApplyDamage(float damage)
     {
         Instantiate(leafParticle, transform.position, Quaternion.identity);
