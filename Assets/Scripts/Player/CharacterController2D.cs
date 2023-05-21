@@ -261,6 +261,12 @@ public class CharacterController2D : MonoBehaviour
 		transform.localScale = theScale;
 	}
 
+	public void Kill()
+	{
+		animator.SetBool("Hit", true);
+		StartCoroutine(WaitToDead());
+	}
+
 	public void ApplyDamage(float damage, Vector3 position) 
 	{
 		if (!invincible)

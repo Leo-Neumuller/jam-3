@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour
     public float spawnY = 10.0f;
     public static int numItems = 0; // garder une trace du nombre d'objets
     public int maxItems = 3; // le nombre maximum d'objets qui peuvent être présents en même temps
+    public GameObject SpawnPoint;
 
     private void Start()
     {

@@ -24,7 +24,10 @@ public class Grass : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        UpdateScore();
+        if (col.gameObject.CompareTag("Player"))
+        {
+            UpdateScore();
+        }
     }
     
     private void UpdateScore()
