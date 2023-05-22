@@ -11,7 +11,6 @@ public class Spawner : MonoBehaviour
     public float spawnY = 10.0f;
     public static int numItems = 0; // garder une trace du nombre d'objets
     public int maxItems = 3; // le nombre maximum d'objets qui peuvent être présents en même temps
-    public GameObject SpawnPoint;
 
     private void Start()
     {
@@ -27,7 +26,7 @@ public class Spawner : MonoBehaviour
             if (numItems < maxItems) // seulement créer un nouvel objet si la limite n'est pas atteinte
             {
                 float randomX = Random.Range(minX, maxX);
-                Instantiate(itemToSpawn, new Vector3(randomX, spawnY, 0), Quaternion.identity);
+                GameObject tmp = Instantiate(itemToSpawn, new Vector3(randomX, spawnY, 0), Quaternion.identity);
                 numItems++; // augmenter le nombre d'objets
             }
         }
